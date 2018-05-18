@@ -218,6 +218,7 @@ ROLE_GUEST = 'guest'
 ROLE_DEFAULT = 'default'
 ROLE_MEMBER = 'member'
 ROLE_ADMIN = 'admin'
+ROLE_STUDENT = 'student'
 
 BuiltinRoleDescriptor = functools.partial(
     collections.namedtuple('BuiltinRoleDescriptor',
@@ -238,14 +239,14 @@ DOMAIN_SYSTEM = {
               ROLE_MEMBER: DEFAULT_PERMISSIONS,
               ROLE_ADMIN: ADMIN_PERMISSIONS},
     'gravatar': '',
-    'name': 'Vijos',
+    'name': 'YOJ',
     'bulletin': ''
 }
 DOMAINS = [DOMAIN_SYSTEM]
 
 # Users.
 UID_SYSTEM = 0
-UNAME_SYSTEM = 'Vijos'
+UNAME_SYSTEM = 'YOJ'
 USER_SYSTEM = {
     '_id': UID_SYSTEM,
     'uname': UNAME_SYSTEM,
@@ -307,8 +308,7 @@ LEVELS = collections.OrderedDict([(10, 1),
 
 # Footer extra HTMLs. TODO(iceboy): remove.
 FOOTER_EXTRA_HTMLS = ['© 2005 - 2017 <a href="https://vijos.org/">Vijos.org</a>', version.get(),
-                      '<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">' +
-                      '沪ICP备14040537号</a>']
+                      'HuiZhou No.1 Middle School']
 
 PROBLEM_CATEGORIES = collections.OrderedDict([
     ('动态规划', [
