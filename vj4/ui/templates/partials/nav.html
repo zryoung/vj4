@@ -27,8 +27,21 @@
     {% if handler.has_perm(vj4.model.builtin.PERM_EDIT_DESCRIPTION) or handler.has_perm(vj4.model.builtin.PERM_EDIT_PERM) %}
       {{ nav_item('domain_manage', 'domain_manage') }}
     {% endif %}
+      <li class="nav__list-item">
+        <form method="get" action="{{ reverse_url('problem_search') }}">
+          <li class="nav__list-item">
+            <label>
+              <input name="q" type="text" class="textbox" value="" placeholder="1001">
+            </label>
+          </li>
+          <li class="nav__list-item">
+            <button type="submit" class="primary button">{{ _('Search') }}</button>
+          </li>
+        </form>
+      </li>
     </ol>
     <ol class="nav__list nav__list--secondary clearfix">
+
     {% if not handler.has_priv(vj4.model.builtin.PRIV_USER_PROFILE) %}
       <li class="nav__list-item"><a href="{{ reverse_url('user_login') }}" class="nav__item" name="nav_login">{{ _('Login') }}</a></li>
       <li class="nav__list-item"><a href="{{ reverse_url('user_register') }}" class="nav__item--round">{{ _('Sign Up') }}</a></li>
